@@ -1,0 +1,836 @@
+/*Estilos generales*/
+body {
+  background-color: #050b42;
+  color: white;
+}
+
+footer {
+  background-color: #0d192b;
+}
+
+button a {
+  padding: 0;
+  text-decoration: none;
+  color: white;
+}
+
+.seccion-titulo {
+  font-size: 1.8rem;
+}
+
+.seccion-descripcion {
+  font-size: 1.3rem;
+  font-weight: lighter;
+}
+
+/*Navegación*/
+.navbar {
+  margin: 0;
+  padding: 10px;
+  background-color: transparent;
+}
+
+.navbar a:hover {
+  font-weight: bold;
+}
+
+.navbar img {
+  height: 40px;
+  margin: 5px 0 5px 15px;
+}
+
+.navbar-custom {
+  transition: background-color 0.3s;
+}
+
+.navbar-custom.scrolled {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ) !important; /* Fondo más opaco al hacer scroll */
+}
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+  color: #ffffff;
+}
+.navbar-custom .nav-link:hover {
+  color: #007bff;
+}
+
+.navbar .navbar-toggler {
+  background-color: white;
+}
+
+/*CTA*/
+.cta {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.carousel * {
+  height: auto; /* Ajusta la altura según sea necesario */
+}
+
+.carousel-item,
+.carousel-item.active {
+  height: auto;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionarse */
+}
+
+.cta .info {
+  position: absolute;
+  width: 50%;
+  top: 50%;
+  left: 2%;
+  transform: translateY(-50%);
+  text-align: left;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  margin-left: 20px;
+}
+
+.cta .info h1,
+.cta .info h2,
+.cta .info p,
+.cta .info button {
+  margin: 10px 0;
+}
+
+.cta .info button {
+  background-color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+/*Nosotros*/
+.nosotros .descripcion {
+  display: flex;
+  flex-direction: row;
+  padding: 80px 60px;
+  height: 450px;
+}
+
+.descripcion img {
+  height: 55vh;
+  width: 40vw;
+  margin-right: 30px;
+  text-align: center;
+}
+
+.descripcion-texto {
+  align-content: center;
+}
+
+#typewriter {
+  color: #4995ff;
+}
+
+.resumen.container-fluid {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Añade esta línea para evitar desbordamiento horizontal */
+}
+
+.resumen-item {
+  background-color: #0753bdb3;
+  padding: 0;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/*Servicios*/
+.servicios {
+  padding: 40px 20px 0 20px;
+}
+
+.servicios .row {
+  padding-top: 20px;
+  gap: 20px;
+}
+
+.servicios .columna {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: all 0.2s ease-in;
+  position: relative;
+  background-color: #0753bdb3; /* Fondo blanco para mayor contraste */
+  padding: 20px; /* Espacio alrededor del contenido */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 15px 30px #ffffff63, /* Sombra más grande */ 0 0 5px #ffffffc8; /* Sombra más pequeña */
+  transform: translateY(-10px); /* Efecto de desplazamiento hacia arriba */
+  transition: all 0.3s ease; /* Transición suave */
+}
+
+.servicios .columna:hover {
+  background-color: #2d7be7e6; /* Fondo blanco para mayor contraste */
+  transform: translateY(-20px); /* Mayor desplazamiento hacia arriba */
+  box-shadow: 0 20px 40px #ffffff63,
+    /* Sombra más grande */ -5px 5px 20px #ffffffc8; /* Sombra más pequeña */
+  color: white;
+}
+
+.servicios i {
+  font-size: 2.5rem;
+  color: #050b42;
+  background-color: white;
+  padding: 8px 19px;
+  border-radius: 50%;
+}
+
+.servicios .columna:hover i {
+  background-color: #050b42;
+  color: white;
+}
+
+.servicio-titulo {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 12px 0 10px;
+}
+
+.badges-contenedor {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.badge {
+  margin: 5px;
+}
+
+/*siempre poner primero la clase personalizada de css antes de las predefinidas en bootstrap para que funcionen*/
+.morado {
+  background-color: purple;
+  color: white;
+}
+
+/* Proyectos */
+.proyectos {
+  padding: 85px 20px 45px 20px;
+  text-align: center;
+  align-items: center;
+}
+
+.proyectos .col-12 {
+  margin: 0 0 30px 0;
+}
+
+.proyectos .img {
+  height: 250px;
+  width: 98%;
+  padding: 5px 0;
+  z-index: 1;
+  border-radius: 10%;
+}
+
+.proyectos-contenedor {
+  padding: 30px 0 0;
+  margin-bottom: 0 !important;
+  margin-bottom: 40px;
+}
+
+.proyecto {
+  height: calc(100% - 30px);
+  width: calc(100% - 30px); /* Ajusta el ancho para compensar el margen */
+  background-color: #101010;
+  border-radius: 10%;
+  box-shadow: 10px 10px 10px #0000008c;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 25px 30px 25px; /* Márgenes laterales y margen inferior */
+}
+
+.proyecto::before {
+  content: "";
+  position: absolute;
+  height: 240px;
+  width: 360px;
+  background-image: conic-gradient(#2d7be7e6 20deg, transparent 120deg);
+  animation: rotar 7s linear infinite;
+}
+
+@keyframes rotar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.proyecto::after {
+  content: "";
+  position: absolute;
+  height: 245px;
+  width: calc(100% - 8px);
+  background-color: #101010;
+  border-radius: 10%;
+  box-shadow: inset 10px 10px 10px #0000008c;
+}
+
+.proyecto:hover img {
+  opacity: 0.5;
+}
+
+.proyecto:hover .overlay {
+  opacity: 1;
+}
+
+.overlay {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  transition: all 0.2s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.overlay p {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 0;
+  color: #709bff;
+}
+
+.overlay .iconos-contenedor {
+  display: flex;
+  justify-content: space-evenly;
+  justify-items: center;
+  max-width: 100%;
+}
+
+.overlay .iconos-contenedor img {
+  margin: 10px 0 0;
+  padding: 0;
+  height: 70px;
+  width: 70px;
+  background-color: white;
+  border: 2px solid #0d192b;
+  border-radius: 50%;
+}
+
+.overlay .iconos-contenedor a:hover img {
+  height: 75px;
+  width: 75px;
+  background-color: #007bff;
+}
+
+.proyectos a {
+  padding: 0 !important;
+}
+
+.proyectos .btn {
+  width: 182px;
+}
+
+.proyectos button i {
+  padding-left: 10px;
+}
+
+/*Testimonios*/
+.testimonios {
+  padding-top: 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonios .carousel {
+  max-width: 800px;
+}
+
+.testimonios .carousel-inner {
+  height: 400px;
+  align-content: center;
+}
+
+.carousel-item .container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonios .testimonio-imagen {
+  height: 150px;
+  width: 150px;
+  margin: 10px 10px 20px 10px;
+}
+
+.testimonio-texto {
+  color: white;
+  max-width: 70%;
+  font-size: 16px;
+  text-align: center;
+}
+
+.testimonio-info {
+  font-weight: bold;
+  text-align: center;
+}
+
+.testimonio-info p {
+  margin-bottom: 0;
+}
+
+.testimonio-info .cliente {
+  color: whitesmoke;
+  font-size: 1.2rem;
+}
+
+.testimonio-info .cargo {
+  font-size: 0.9rem;
+  color: gray;
+}
+
+/*Contacto*/
+#contacto {
+  padding: 50px 0 70px;
+  text-align: center;
+}
+
+.contacto .container {
+  max-width: 1100px;
+  padding: 5px 40px;
+  align-content: center;
+}
+
+.contacto .rectangulo {
+  margin-top: 1rem;
+  min-height: 150px;
+  align-content: center;
+  background-color: #0d192b;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px 1px white;
+}
+
+.contacto .row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.contacto .row div {
+  height: 100px;
+  align-content: center;
+}
+
+.contacto .row div:not(:last-child) {
+  border-right: 2px inset whitesmoke;
+}
+
+.contacto .invitacion {
+  font-size: 1.8rem;
+  font-family: "Play", sans-serif;
+  font-weight: 700;
+}
+
+.contacto .descripcion {
+  color: white;
+  font-size: 1rem;
+}
+
+.contacto button {
+  color: white;
+  font-weight: bold;
+  border: 2px inset white;
+  /*unidad relativa al tamaño del texto del contenedor*/
+  padding: 0.5em 1.1em;
+  border-radius: 100px;
+  transition: all 0.2s ease-in-out;
+}
+
+.contacto button:hover {
+  background-color: #007bff;
+  border: 2px outset white;
+  color: #0d192b;
+}
+
+.contacto button i {
+  color: white;
+  font-size: 1.3rem;
+  margin-left: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.contacto button:hover i {
+  color: black;
+}
+
+/*Pie de página (Footer)*/
+footer {
+  min-height: 300px;
+  padding: 60px 0 30px;
+}
+
+.footer-logo {
+  height: 80px;
+  width: 80px;
+  background-color: white;
+  border: 2px outset whitesmoke;
+  border-radius: 50%;
+  margin: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+a .footer-logo:hover {
+  opacity: 0.7;
+}
+
+.iconos-redes-sociales a {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  margin: 10px;
+  border: 2px solid white;
+  border-radius: 50%;
+  transition: all 0.2s ease-in;
+}
+
+.iconos-redes-sociales i {
+  color: white !important;
+  font-size: 1.5rem;
+  transition: all 0.2s ease-in;
+}
+
+.iconos-redes-sociales a:hover {
+  background-color: white;
+  border: 2px solid #050b42 !important;
+}
+
+.iconos-redes-sociales a:hover i {
+  color: #050b42 !important;
+}
+
+.derechos-de-autor {
+  font-size: 18px;
+  color: grey;
+  padding: 20px;
+  text-align: center;
+}
+
+/*Responsive*/
+/*Celulares pequeños S*/
+@media (width < 321px) {
+  .cta {
+    height: 400px;
+    background-color: pink;
+  }
+
+  .nosotros .descripcion {
+    padding: 70px 16px 80px !important;
+  }
+
+  footer .derechos-de-autor {
+    font-size: 0.8rem !important;
+  }
+}
+
+/*Celulares medianos M*/
+@media (width < 376px) {
+  .cta {
+    height: 400px;
+    background-color: pink;
+  }
+
+  .cta .info {
+    min-width: 300px !important;
+    padding: 0 10px !important;
+  }
+
+  .cta .info h1 {
+    font-size: 1.5rem !important;
+  }
+
+  .cta .info h2 {
+    font-size: 1.1rem !important;
+  }
+
+  .cta .info p {
+    font-size: 0.85rem !important;
+  }
+
+  .nosotros .descripcion {
+    margin-bottom: 23px;
+  }
+}
+
+/*Celulares grandes L*/
+@media (width < 426px) {
+  /*Estilos generales*/
+  .seccion-titulo {
+    font-size: 1.4rem !important;
+  }
+
+  .seccion-descripcion {
+    font-size: 1rem !important;
+  }
+
+  /*Section CTA*/
+  .cta {
+    height: 400px;
+    background-color: pink;
+  }
+
+  /*Section Nosotros*/
+  .nosotros .descripcion {
+    padding: 70px 40px 80px;
+  }
+
+  /*Section Proyectos*/
+  .proyectos .btn-info {
+    font-size: 0.9rem;
+  }
+
+  /*Section Testimonios*/
+  .testimonios .testimonio-imagen {
+    width: 100px !important;
+    height: 100px !important;
+  }
+
+  .testimonios .testimonio-texto {
+    font-size: 0.8rem;
+  }
+
+  /*Section Contacto*/
+  .contacto .row {
+    padding: 0 36px !important;
+  }
+
+  .rectangulo .invitacion {
+    font-size: 1.4rem !important;
+  }
+
+  .rectangulo .descripcion {
+    font-size: 0.9rem !important;
+  }
+
+  footer .derechos-de-autor {
+    font-size: 0.9rem;
+  }
+}
+
+@media (width < 576px) {
+  /*Section Contacto*/
+  .contacto .row {
+    padding: 0 50px;
+  }
+
+  .contacto .row div:not(:last-child) {
+    border: none;
+    border-bottom: 2px inset whitesmoke;
+  }
+
+  .nosotros .resumen .resumen-item {
+    height: 100px;
+  }
+}
+
+/*Tablets*/
+@media (width < 660px) {
+  .nosotros .descripcion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 600px !important;
+  }
+  .descripcion img {
+    margin: 0 0 25px;
+    min-width: 245px;
+  }
+}
+
+@media (width < 769px) {
+  /*Estilos generales*/
+  .seccion-titulo {
+    font-size: 1.6rem;
+  }
+
+  .seccion-descripcion {
+    font-size: 1.1rem;
+  }
+
+  /*Section CTA*/
+  .cta {
+    height: 700px;
+    background-color: #050100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .cta .info {
+    position: relative;
+    margin: 0;
+    margin-top: -25px;
+    padding: 0;
+    width: 65%;
+    min-width: 330px !important;
+    top: auto;
+    left: auto;
+    transform: none;
+    text-align: center;
+  }
+  .cta .info h1 {
+    font-size: 1.7rem;
+  }
+  .cta .info h2 {
+    font-size: 1.3rem;
+  }
+  .cta .info p {
+    font-size: 0.9rem;
+  }
+
+  .cta .info .btn {
+    font-size: 1rem;
+  }
+  .carousel-item img {
+    height: 432px;
+  }
+
+  /*Section Nosotros*/
+  .nosotros .descripcion {
+    height: 400px;
+  }
+  .descripcion h3 {
+    font-size: 1.3rem;
+  }
+  .descripcion .texto {
+    font-size: 0.9rem;
+  }
+  .resumen-item {
+    font-size: 1.4rem;
+    height: 130px;
+  }
+
+  /*Section Servicios*/
+  .servicios .row {
+    padding-top: 40px;
+    gap: 15px;
+  }
+
+  .servicios .columna {
+    font-size: 0.9rem;
+  }
+
+  .servicios > .columna:nth-child(1),
+  .servicios > .columna:nth-child(2) {
+    margin-top: 0 !important;
+  }
+
+  .servicios i {
+    font-size: 1.8rem;
+  }
+
+  .servicio-titulo {
+    font-size: 20px;
+    margin: 10px 0 8px;
+  }
+
+  .badges-contenedor {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  /*Section Testimonios*/
+  .testimonios .testimonio-imagen {
+    height: 120px;
+    width: 120px;
+    margin: 10px 10px 20px 10px;
+  }
+
+  .testimonio-texto {
+    font-size: 1rem;
+  }
+
+  .testimonio-info .cliente {
+    font-size: 1rem;
+  }
+
+  .testimonio-info .cargo {
+    font-size: 0.8rem;
+    color: gray;
+  }
+
+  .testimonios .carousel-inner {
+    height: 350px;
+  }
+
+  /*Section Contacto*/
+  .contacto .invitacion {
+    font-size: 1.5rem;
+  }
+
+  .contacto .descripcion {
+    font-size: 0.9rem;
+  }
+
+  /*Footer*/
+  footer {
+    min-height: 300px;
+    padding: 60px 0 30px;
+  }
+
+  .footer-logo {
+    height: 70px;
+    width: 70px;
+    background-color: white;
+    border: 2px outset whitesmoke;
+    border-radius: 50%;
+    margin: 10px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  a .footer-logo:hover {
+    opacity: 0.7;
+  }
+
+  .iconos-redes-sociales a {
+    width: 45px;
+    height: 45px;
+  }
+
+  .iconos-redes-sociales i {
+    font-size: 1.3rem;
+  }
+
+  .derechos-de-autor {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
